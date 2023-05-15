@@ -1,0 +1,132 @@
+body {
+	margin: 10px;
+	font-family: Arial, sans-serif;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 12px;
+	text-align: left;
+	vertical-align: top;
+}
+
+th > span {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.class {
+	margin-bottom: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	overflow: hidden;
+	transition: background-color 0.3s ease;
+}
+
+.class:hover {
+	background-color: #f5f5f5;
+}
+
+.class-info {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #ddd;
+	transition: background-color 0.3s ease;
+}
+
+.class-info:hover {
+	background-color: #f0f0f0;
+}
+
+.class-info h3 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+}
+
+.class-info p {
+	margin: 10px 0;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #666;
+}
+
+.class-name {
+	font-weight: bold;
+}
+
+.class-time {
+	color: #999;
+}
+
+.class.folded .student-list {
+	display: none;
+}
+
+.class-info::after {
+	content: '▼';
+	display: inline-block;
+	margin-left: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	transition: transform 0.3s ease;
+	color: #999;
+}
+
+.folded .class-info::after {
+	content: '▲';
+	transition: transform 0.3s ease;
+}
+
+.class.unfolded .class-info {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.student-list {
+	margin-top: 10px;
+}
+
+.student-list-item {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.teacher-select-label {
+	font-weight: bold;
+	margin-right: 10px;
+	font-size: 16px;
+}
+
+.teacher-select-select {
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	color: #333;
+	transition: box-shadow 0.3s ease;
+}
+
+.teacher-select-select:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-select-option {
+	font-size: 14px;
+	color: #333;
+}
+
+.teacher-select-option:hover {
+	background-color: #f5f5f5;
+}
