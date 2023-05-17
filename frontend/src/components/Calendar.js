@@ -78,12 +78,6 @@ function Calendar({ classData }) {
 				const classKey = `${lesson.id}-${lesson.start_at.date}`; //key for checking dupes
 
 				if (!uniqueClassKeys.has(classKey)) {
-					console.log(
-						'Adding class:',
-						classKey,
-						'to',
-						getDayName(lessonDate.getDay())
-					);
 					classesByDay[getDayName(lessonDate.getDay())].push({
 						classObj,
 						lesson

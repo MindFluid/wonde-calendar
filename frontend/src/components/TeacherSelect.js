@@ -24,7 +24,6 @@ function TeacherSelect() {
 		fetchTeachers();
 	}, []);
 
-
 	async function handleTeacherSelect(event) {
 		const teacherID = event.target.value;
 		const teacherClasses = await getEmployeeClasses(teacherID);
@@ -38,7 +37,7 @@ function TeacherSelect() {
 
 	return (
 		<div className="teacher-select-container">
-			<label htmlFor="teacher-select-label">Select a teacher: </label>
+			<label htmlFor="teacher-select">Select a teacher: </label>
 			<select
 				className="teacher-select-select"
 				id="teacher-select"
